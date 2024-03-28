@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Fish App</string>
+
+    <string name="add_fish_name">Add Fish Name</string>
+    <string name="fish_name">Fish Name</string>
+    <string name="amount">Amount</string>
+    <string name="fishColor">Fish Color</string>
+    <string name="price">Price</string>
+    <string name="no_fish">No Fish</string>
+    <string name="text_empty_content">No Fish Found</string>
+    <string name="add_fish">Add Fish</string>
+    <string name="update_fish">Update Fish</string>
+    <string name="delete_fish">Delete Fish</string>
+    <string name="all_fishes_title">Fish List</string>
+
+</resources>

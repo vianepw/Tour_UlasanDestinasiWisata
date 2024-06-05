@@ -1,4 +1,4 @@
-package com.application.fish_app.tickets_app
+package com.application.tour_destinasi.tickets_app
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

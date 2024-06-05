@@ -1,4 +1,4 @@
-package com.application.fish_app.views.utils
+package com.application.tour_destinasi.views.utils
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -13,8 +13,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.application.fish_app.ui.theme.BlueDark
-import com.application.fish_app.ui.theme.BlueLight
+import com.application.tour_destinasi.ui.theme.BlueDark
+import com.application.tour_destinasi.ui.theme.BlueLight
 
 @Composable
 fun CustomButton(buttonText: String, onclick: () -> Unit) {

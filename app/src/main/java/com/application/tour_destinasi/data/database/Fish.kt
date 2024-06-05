@@ -1,4 +1,4 @@
-package com.application.fish_app.data.database
+package com.application.tour_destinasi.data.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

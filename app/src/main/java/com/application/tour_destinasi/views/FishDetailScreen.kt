@@ -1,4 +1,4 @@
-package com.application.fish_app.views
+package com.application.tour_destinasi.views
 
 import android.widget.Toast
 import androidx.compose.foundation.background
@@ -43,11 +43,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.application.fish_app.R
-import com.application.fish_app.data.database.Fish
-import com.application.fish_app.data.viewmodel.FishViewModel
-import com.application.fish_app.navigation.Screen
-import com.application.fish_app.views.utils.CustomUpdateButton
+import com.application.tour_destinasi.R
+import com.application.tour_destinasi.data.database.Fish
+import com.application.tour_destinasi.data.viewmodel.FishViewModel
+import com.application.tour_destinasi.navigation.Screen
+import com.application.tour_destinasi.views.utils.CustomUpdateButton
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FishDetailScreen(id: Int, fishViewModel: FishViewModel, navController: NavController) {

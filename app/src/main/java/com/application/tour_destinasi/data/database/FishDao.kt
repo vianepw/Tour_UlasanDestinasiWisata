@@ -1,4 +1,4 @@
-package com.application.fish_app.data.database
+package com.application.tour_destinasi.data.database
 
 import androidx.room.Dao
 import androidx.room.Delete

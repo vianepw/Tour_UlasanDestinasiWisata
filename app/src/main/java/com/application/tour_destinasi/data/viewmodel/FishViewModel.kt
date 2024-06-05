@@ -1,13 +1,13 @@
-package com.application.fish_app.data.viewmodel
+package com.application.tour_destinasi.data.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.application.fish_app.data.database.Fish
-import com.application.fish_app.data.database.FishDao
-import com.application.fish_app.data.database.FishDatabase
+import com.application.tour_destinasi.data.database.Fish
+import com.application.tour_destinasi.data.database.FishDao
+import com.application.tour_destinasi.data.database.FishDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.util.concurrent.ExecutorService

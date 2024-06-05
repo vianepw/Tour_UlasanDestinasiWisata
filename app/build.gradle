@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.application.fish_app'
+    namespace 'com.application.tour_destinasi'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.application.fish_app"
+        applicationId "com.application.tour_destinasi"
         minSdk 24
         targetSdk 33
         versionCode 1

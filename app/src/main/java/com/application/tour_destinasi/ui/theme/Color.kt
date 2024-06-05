@@ -1,4 +1,4 @@
-package com.application.fish_app.ui.theme
+package com.application.tour_destinasi.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

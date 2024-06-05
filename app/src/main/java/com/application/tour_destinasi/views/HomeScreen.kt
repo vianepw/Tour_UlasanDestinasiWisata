@@ -1,4 +1,4 @@
-package com.application.fish_app.views
+package com.application.tour_destinasi.views
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -17,9 +17,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.application.fish_app.navigation.Screen
-import com.application.fish_app.ui.theme.BlueLight
-import com.application.fish_app.views.utils.CustomButtonWhite
+import com.application.tour_destinasi.navigation.Screen
+import com.application.tour_destinasi.ui.theme.BlueLight
+import com.application.tour_destinasi.views.utils.CustomButtonWhite
 
 
 @Composable
@@ -31,24 +31,24 @@ fun HomeScreen(navController: NavController) {
             verticalArrangement = Arrangement.Center
         ) {
             Text(
-                text = "Tour",
+                text = "Tour Destination",
                 fontFamily = FontFamily.Monospace,
-                fontSize = 80.sp,
+                fontSize = 35.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.White
             )
             Spacer(modifier = Modifier.height(20.dp))
             Text(
-                text = "Dive into Effortless Fish Management.",
+                text = "Mencari Tempat Tujuan Wisata Di Sini",
                 fontFamily = FontFamily.Cursive,
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.White
             )
             Spacer(modifier = Modifier.height(100.dp))
-            CustomButtonWhite("List all Fishes") { navController.navigate(route = Screen.AllFishesScreen.route) }
+            CustomButtonWhite("List all Destination") { navController.navigate(route = Screen.AllFishesScreen.route) }
             Spacer(modifier = Modifier.height(20.dp))
-            CustomButtonWhite("Add a Fish") { navController.navigate(Screen.AddFishScreen.route) }
+            CustomButtonWhite("Add a Destination") { navController.navigate(Screen.AddFishScreen.route) }
         }
     }
 }

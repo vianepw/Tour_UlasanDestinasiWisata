@@ -1,4 +1,4 @@
-package com.application.fish_app.views
+package com.application.tour_destinasi.views
 
 import android.util.Log
 import android.widget.Toast
@@ -16,7 +16,7 @@ import androidx.compose.material.DropdownMenu
 import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.Icon
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowCircleDown
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
@@ -37,11 +37,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.application.fish_app.R
-import com.application.fish_app.data.database.Fish
-import com.application.fish_app.data.viewmodel.FishViewModel
-import com.application.fish_app.ui.theme.BlueLight
-import com.application.fish_app.views.utils.CustomButton
+import com.application.tour_destinasi.R
+import com.application.tour_destinasi.data.database.Fish
+import com.application.tour_destinasi.data.viewmodel.FishViewModel
+import com.application.tour_destinasi.ui.theme.BlueLight
+import com.application.tour_destinasi.views.utils.CustomButton
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -53,7 +53,7 @@ fun AddFishScreen(fishViewModel: FishViewModel) {
     var price by rememberSaveable { mutableStateOf("") }
     var isFishColorDropDownExpanded by remember { mutableStateOf(false) }
     var isPriceDropDownExpanded by remember { mutableStateOf(false) }
-    val fishColorList = listOf("Red", "Blue", "Green", "Yellow", "White", "Black", "Orange", "Brown", "Silver", "Gold",)
+    val fishColorList = listOf("Red", "Blue", "Green", "Yellow", "White", "Black", "Orange", "Brown", "Silver", "Gold")
     val priceList = listOf(
         "Rp. 50,000 ",
         "Rp. 100,000",
@@ -64,7 +64,6 @@ fun AddFishScreen(fishViewModel: FishViewModel) {
         "Rp. 350,000",
         "Rp. 400.000"
     )
-
 
     Box(
         modifier = Modifier
@@ -78,7 +77,7 @@ fun AddFishScreen(fishViewModel: FishViewModel) {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
-                text = "Add A Fish",
+                text = "Tambah Destinasi",
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
@@ -114,7 +113,7 @@ fun AddFishScreen(fishViewModel: FishViewModel) {
                     OutlinedTextField(
                         value = fishColor,
                         onValueChange = { fishColor = it },
-                        placeholder = { androidx.compose.material.Text(text = "Choose Fish Color") },
+                        placeholder = { Text(text = "Pilih Tempat Destinasi") },
                         enabled = false,
                         modifier = Modifier
                             .clickable {
@@ -122,7 +121,7 @@ fun AddFishScreen(fishViewModel: FishViewModel) {
                             }
                             .fillMaxWidth(0.8f),
                         textStyle = TextStyle(color = Color.Black),
-                        trailingIcon = { Icon(imageVector = Icons.Default.ArrowCircleDown, "") }
+                        trailingIcon = { Icon(imageVector = Icons.Default.ArrowDropDown, contentDescription = null) }
                     )
 
                     DropdownMenu(
@@ -136,7 +135,7 @@ fun AddFishScreen(fishViewModel: FishViewModel) {
                                 fishColor = selectedItem
                                 isFishColorDropDownExpanded = false
                             }) {
-                                androidx.compose.material.Text(selectedItem)
+                                Text(selectedItem)
                             }
                             if (index != fishColorList.lastIndex)
                                 Divider(Modifier.background(Color.Black))
@@ -151,12 +150,11 @@ fun AddFishScreen(fishViewModel: FishViewModel) {
                     .wrapContentSize(Alignment.Center),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-
                 Box {
                     OutlinedTextField(
                         value = price,
                         onValueChange = { price = it },
-                        placeholder = { androidx.compose.material.Text(text = "Choose The Price") },
+                        placeholder = { Text(text = "Pilih Harga") },
                         enabled = false,
                         modifier = Modifier
                             .clickable {
@@ -164,7 +162,7 @@ fun AddFishScreen(fishViewModel: FishViewModel) {
                             }
                             .fillMaxWidth(0.8f),
                         textStyle = TextStyle(color = Color.Black),
-                        trailingIcon = { Icon(imageVector = Icons.Default.ArrowCircleDown, "") }
+                        trailingIcon = { Icon(imageVector = Icons.Default.ArrowDropDown, contentDescription = null) }
                     )
 
                     DropdownMenu(
@@ -178,7 +176,7 @@ fun AddFishScreen(fishViewModel: FishViewModel) {
                                 price = selectedItem
                                 isPriceDropDownExpanded = false
                             }) {
-                                androidx.compose.material.Text(selectedItem)
+                                Text(selectedItem)
                             }
                             if (index != priceList.lastIndex)
                                 Divider(Modifier.background(Color.Black))
@@ -190,7 +188,7 @@ fun AddFishScreen(fishViewModel: FishViewModel) {
             CustomButton(stringResource(id = R.string.add_fish)) {
                 // Create the Fish object
                 if (fishName == "" || amount == "" || fishColor == "" || price == "") {
-                    Toast.makeText(context, "Fish Added Failed", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Gagal Menambah Destinasi", Toast.LENGTH_SHORT).show()
                     Log.d("data db", "Data Gagal")
                 } else {
                     val fish = Fish(fishName, amount, fishColor, price)
@@ -203,10 +201,9 @@ fun AddFishScreen(fishViewModel: FishViewModel) {
                     amount = ""
                     fishColor = ""
                     price = ""
-                    Toast.makeText(context, "Fish added successfully", Toast.LENGTH_SHORT)
+                    Toast.makeText(context, "Berhasil Menambah Destinasi", Toast.LENGTH_SHORT)
                         .show()
                 }
-
             }
         }
     }

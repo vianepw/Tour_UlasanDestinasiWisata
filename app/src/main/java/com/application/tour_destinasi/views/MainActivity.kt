@@ -1,4 +1,4 @@
-package com.application.fish_app.views
+package com.application.tour_destinasi.views
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,9 +12,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.application.fish_app.data.viewmodel.FishViewModel
-import com.application.fish_app.navigation.Screen
-import com.application.fish_app.ui.theme.FishAppTheme
+import com.application.tour_destinasi.data.viewmodel.FishViewModel
+import com.application.tour_destinasi.navigation.Screen
+import com.application.tour_destinasi.ui.theme.FishAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

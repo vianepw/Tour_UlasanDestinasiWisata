@@ -1,19 +1,20 @@
 package com.application.tour_destinasi.data.database
 
+
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "fish")
-data class Fish(
-    @ColumnInfo(name = "fishName")
-    var fishName: String,
+@Entity(tableName = "destination")
+data class Destination(
+    @ColumnInfo(name = "destinationName")
+    var destinationName: String,
 
     @ColumnInfo(name = "amount")
     var amount: String,
 
-    @ColumnInfo(name = "fishColor")
-    var fishColor: String,
+    @ColumnInfo(name = "dColor")
+    var dColor: String,
 
     @ColumnInfo(name = "price")
     var price: String,

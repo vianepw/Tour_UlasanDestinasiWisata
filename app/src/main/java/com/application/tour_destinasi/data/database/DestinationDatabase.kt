@@ -6,28 +6,28 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 @Database(
-    entities = [Fish::class],
+    entities = [Destination::class],
     version = 1
 )
-abstract class FishDatabase : RoomDatabase() {
+abstract class DestinationDatabase : RoomDatabase() {
 
-    abstract fun fishDao(): FishDao
+    abstract fun AppDao(): AppDao
 
     companion object {
         @Volatile
-        private var INSTANCE: FishDatabase? = null
+        private var INSTANCE: DestinationDatabase? = null
 
-        fun getInstance(context: Context): FishDatabase {
+        fun getInstance(context: Context): DestinationDatabase {
             INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    FishDatabase::class.java,
-                    "fish_db"
+                    DestinationDatabase::class.java,
+                    "Destination_db"
                 ).build()
                 INSTANCE = instance
                 instance
             }
-            return INSTANCE as FishDatabase
+            return INSTANCE as DestinationDatabase
         }
     }
 }

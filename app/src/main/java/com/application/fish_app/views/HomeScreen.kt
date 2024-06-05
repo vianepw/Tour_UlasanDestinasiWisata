@@ -31,9 +31,9 @@ fun HomeScreen(navController: NavController) {
             verticalArrangement = Arrangement.Center
         ) {
             Text(
-                text = "Fish App",
+                text = "Tour",
                 fontFamily = FontFamily.Monospace,
-                fontSize = 50.sp,
+                fontSize = 80.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.White
             )
